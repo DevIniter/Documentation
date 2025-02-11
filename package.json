@@ -16,6 +16,9 @@
     "prepare": "husky",
     "lint": "eslint ."
   },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown --allow-empty"
+  },
   "dependencies": {
     "@docusaurus/core": "3.7.0",
     "@docusaurus/preset-classic": "3.7.0",
