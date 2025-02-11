@@ -16,8 +16,13 @@
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.hero__title {
+  /* color: var(--ifm-color-secondary) !important; */
+  color: white !important;
+  margin-inline: auto;
+  font-size: 86px;
+}
+
+.hero__desc {
+  font-size: 24px;
 }
