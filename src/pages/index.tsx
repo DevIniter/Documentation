@@ -1,40 +1,35 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
+import type { ReactNode } from "react";
+import clsx from "clsx";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Layout from "@theme/Layout";
+import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import Heading from "@theme/Heading";
 
-import styles from './index.module.css';
+import styles from "./index.module.css";
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+        <Heading as="h1" className={clsx("hero__title", styles.hero__title)}>
+          The Ultimate Starter Templates <br /> for Developers
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
+        <Heading as="h6" className={styles.hero__desc}>
+          DevIniter offers a collection of blazing fast starter templates to
+          kickstart your development journey.
+        </Heading>
       </div>
     </header>
   );
 }
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="Description will go into a meta tag in <head />"
+    >
       <HomepageHeader />
       <main>
         <HomepageFeatures />
